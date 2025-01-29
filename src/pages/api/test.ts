@@ -12,6 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         res.status(200).json({ message: 'API response successful!' });
     } catch (error) {
+        console.log(error);
         res.status(429).json({ error: 'Too many requests, please try again later.' });
     }
 }
